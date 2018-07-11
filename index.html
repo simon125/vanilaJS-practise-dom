@@ -9,30 +9,52 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
     <link href="./Favicon/favicon.ico" rel="icon" type="image/x-icon" />
+    <style>
+    </style>
     <title>DOM-practise</title>
 </head>
 
 <body>
-<header id="main-header" class="bg-success text-white p-4 mb-3">
-    <div class="container">
-        <h1 id="header-title">Item Lister</h1>
-    </div>
-</header>
+    <header id="main-header" class="bg-success text-white p-4 mb-3">
+        <div class="container">
+            <div class="col-md-6">
+                <h1 id="header-title">Item Lister</h1>
+            </div>
+            <div class="col-md-6 align-self-center">
+                <input type="text" class="form-control" id="filter" placeholder="Search Items...">
+            </div>
+        </div>
+    </header>
 
     <div class="container">
         <div id="main" class="card card-body">
             <h2 class="title">Add items</h2>
-            <form class="form-inline mb-3">
-                <input type="text" class="form-control mr-2">
-                <input type="submit" value='Submit' class="btn btn-dark">
+            <form id="addForm" class="form-inline mb-3">
+                <input id="item" type="text" class="form-control mr-2">
+                <select class='form-control m-2'>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <input type="submit" value='Submit' id='submitBtn' class="btn btn-dark">
             </form>
-            <h2 class="title">Items</h2>
+            <h2 id="page-1" class="title">Items</h2>
             <ul id="items" class="list-group">
-                <li class="list-group-item">Item 1</li>
-                <li class="list-group-item">Item 2</li>
-                <li class="list-group-item">Item 3</li>
-                <li class="list-group-item">Item 4</li>
+                <li class="list-group-item">Item 1
+                    <button class="btn btn-danger btn-sm float-right delete">X</button>
+                </li>
+                <li class="list-group-item">Item 2
+                    <button class="btn btn-danger btn-sm float-right delete">X</button>
+                </li>
+                <li class="list-group-item">Item 3
+                    <button class="btn btn-danger btn-sm float-right delete">X</button>
+                </li>
+                <li class="list-group-item">Item 4
+                    <button class="btn btn-danger btn-sm float-right delete">X</button>
+                </li>
             </ul>
+            <br>
+            <button class="btn btn-dark" id="button">CLICK ME</button>
         </div>
     </div>
 

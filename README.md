@@ -1,4 +1,4 @@
-### INTRODUCTION
+# INTRODUCTION
 
 It is simple training app which I constantly make for improv VanillaJS skills. It is something like TODO list with saving option, I have used Traversky MEDIA course DOM practise series
 
